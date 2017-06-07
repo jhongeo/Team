@@ -25,9 +25,21 @@
 
    if(!$mail->Send())
    {
-       echo "Mail Not Sent";
+     echo '<script type="text/javascript">
+       function myFunction() {
+         alert("Lo sentimos! Hubo un problema al recibir su solicitud, por favor intente de nuevo.");
+         window.location.href = "index.html#contact";
+       }
+       myFunction();
+         </script>';
    }
    else
    {
-       echo "Mail Sent";
+    echo '<script type="text/javascript">
+      function myFunction() {
+        alert("Enhorabuena! Hemos recibido su correo, en breve nos comunicaremos con usted.");
+        window.location.href = "index.html#contact";
+      }
+      myFunction();
+        </script>';
    }
