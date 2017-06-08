@@ -969,4 +969,10 @@ ul.address {
   background-color: #ff6b00;
 }
 
+#footer .social-icons ul li a.youtube:hover {
+  background-color: #e52d27;
+}
+
+
+
 /*Presets*/
