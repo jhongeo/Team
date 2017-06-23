@@ -14,10 +14,25 @@
   <link href="css/main.css" rel="stylesheet">
   <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-
-
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon.ico">
+
+
+  <script type="text/javascript">
+  function scaleVideo() {
+      var vid = document.getElementsByTagName('video')[0];
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      if (w/16 >= h/9) {
+          vid.setAttribute('width', w);
+          vid.setAttribute('height', 'auto');
+      } else {
+          vid.setAttribute('width', 'auto');
+          vid.setAttribute('height', h);
+      }
+  }
+  </script>
 </head><!--/head-->
 
 <body>
@@ -26,34 +41,12 @@
   <!--/.preloader-->
 
   <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(images/slider/1.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">SINDICIUM <span>TECHNOLOGIES</span></h1>
-            <p class="animated fadeInRightBig">Automatización de descarga de información de Retail y Portales</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar Tour</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(images/slider/2.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig"> <span></span></h1>
-            <p class="animated fadeInRightBig">Análisis, Procesamiento y Automatización de toda la información de tu empresa, gracias a un modelo de minería de datos de alto nivel</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar Tour</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(images/slider/3.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig"><span></span></h1>
-            <p class="animated fadeInRightBig">Generación y automatización de indicadores de negocio que te permitirán tomar mejores decisiones</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar Tour</a>
-          </div>
-        </div>
+      <div class="video-container" >
+        <video autoplay="true" loop="true" muted="true">
+        <source src='videos/Sindicium Intro.mp4'
+        </video>
       </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-    </div><!--/#home-slider-->
+
     <div class="main-nav">
       <div class="container">
         <!--Logo Section-->
